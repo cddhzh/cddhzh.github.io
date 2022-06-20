@@ -3,11 +3,11 @@
   <title>水濑de博客</title>
   
   
-  <link href="https://github.com/cddhzh/atom.xml" rel="self"/>
+  <link href="https://cddhzh.github.io/atom.xml" rel="self"/>
   
-  <link href="https://github.com/cddhzh/"/>
+  <link href="https://cddhzh.github.io/"/>
   <updated>2022-06-20T12:07:22.049Z</updated>
-  <id>https://github.com/cddhzh/</id>
+  <id>https://cddhzh.github.io/</id>
   
   <author>
     <name>cddhzh</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/cddhzh/2022/06/20/hello-world/"/>
-    <id>https://github.com/cddhzh/2022/06/20/hello-world/</id>
+    <link href="https://cddhzh.github.io/2022/06/20/hello-world/"/>
+    <id>https://cddhzh.github.io/2022/06/20/hello-world/</id>
     <published>2022-06-20T12:07:22.048Z</published>
     <updated>2022-06-20T12:07:22.049Z</updated>
     
