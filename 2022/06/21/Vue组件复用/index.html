@@ -20,27 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"cddhzh.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="vue组件的复用过程：记录一次vue自定义组件的复用： 1、先是创建一个组件zone.vue，在js中定义props，即在中定义： 123456789101112131415161718192021&lt;script&gt;export default &amp;#123;    props: &amp;#123;        id: String    &amp;#125;,    data() &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://cddhzh.github.io/2022/06/20/hello-world/index.html">
+<meta property="og:title" content="Vue组件复用">
+<meta property="og:url" content="https://cddhzh.github.io/2022/06/21/Vue%E7%BB%84%E4%BB%B6%E5%A4%8D%E7%94%A8/index.html">
 <meta property="og:site_name" content="水濑de博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="vue组件的复用过程：记录一次vue自定义组件的复用： 1、先是创建一个组件zone.vue，在js中定义props，即在中定义： 123456789101112131415161718192021&lt;script&gt;export default &amp;#123;    props: &amp;#123;        id: String    &amp;#125;,    data() &amp;#123;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-20T12:07:22.048Z">
-<meta property="article:modified_time" content="2022-06-20T12:07:22.049Z">
+<meta property="article:published_time" content="2022-06-20T16:17:13.000Z">
+<meta property="article:modified_time" content="2022-06-20T16:17:52.954Z">
 <meta property="article:author" content="cddhzh">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://cddhzh.github.io/2022/06/20/hello-world/">
+<link rel="canonical" href="https://cddhzh.github.io/2022/06/21/Vue%E7%BB%84%E4%BB%B6%E5%A4%8D%E7%94%A8/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://cddhzh.github.io/2022/06/20/hello-world/","path":"2022/06/20/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://cddhzh.github.io/2022/06/21/Vue%E7%BB%84%E4%BB%B6%E5%A4%8D%E7%94%A8/","path":"2022/06/21/Vue组件复用/","title":"Vue组件复用"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | 水濑de博客</title>
+<title>Vue组件复用 | 水濑de博客</title>
   
 
 
@@ -109,7 +109,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue%E7%BB%84%E4%BB%B6%E7%9A%84%E5%A4%8D%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">vue组件的复用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">总结：</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -167,7 +167,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://cddhzh.github.io/2022/06/20/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://cddhzh.github.io/2022/06/21/Vue%E7%BB%84%E4%BB%B6%E5%A4%8D%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -180,12 +180,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | 水濑de博客">
+      <meta itemprop="name" content="Vue组件复用 | 水濑de博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          Vue组件复用
         </h1>
 
         <div class="post-meta-container">
@@ -195,8 +195,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-06-20 20:07:22" itemprop="dateCreated datePublished" datetime="2022-06-20T20:07:22+08:00">2022-06-20</time>
+      <time title="Created: 2022-06-21 00:17:13 / Modified: 00:17:52" itemprop="dateCreated datePublished" datetime="2022-06-21T00:17:13+08:00">2022-06-21</time>
     </span>
 
   
@@ -209,19 +210,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="vue组件的复用"><a href="#vue组件的复用" class="headerlink" title="vue组件的复用"></a>vue组件的复用</h1><h2 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h2><p>记录一次vue自定义组件的复用：</p>
+<p>1、先是创建一个组件zone.vue，在js中定义props，即在<script></script>中定义：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">        <span class="attr">id</span>: <span class="title class_">String</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">tableData</span>: [</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">circleUrl</span>: <span class="string">&quot;https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png&quot;</span></span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> _this = <span class="variable language_">this</span></span><br><span class="line">        <span class="keyword">let</span> id = <span class="variable language_">this</span>.<span class="property">id</span>  <span class="comment">//取出zone组件的id</span></span><br><span class="line">        axios.<span class="title function_">get</span>(<span class="string">&#x27;http://localhost:8181/discussion/findBySubjectID/&#x27;</span>+id).<span class="title function_">then</span>( <span class="keyword">function</span>(<span class="params">resp</span>)&#123;</span><br><span class="line">            _this.<span class="property">tableData</span> = resp.<span class="property">data</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>2、接着在需要调用的地方使用标签<zone></zone>，并将id作为参数传入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tab-pane v-for=&quot;(item, key) in items&quot; :name=&quot;item.id.toString()&quot; :key=&quot;key&quot; :label=&quot;item.subject&quot;&gt;</span><br><span class="line">    &lt;zone :id=&quot;item.id.toString()&quot;&gt;&lt;/zone&gt;</span><br><span class="line">&lt;/el-tab-pane&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>意思：循环从items中取出一个item，将该item的id作为<zone>的id参数传进去，从而达到每个组件id不同，接着在zone.vue中将id作为参数，向后端取需要的数据。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>​	将组件的props定义好，在需要调用时将参数传入，在通过组件自身的js读取出来作为参数来取出后端数据。</p>
 
     </div>
 
@@ -235,11 +232,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/06/20/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/06/21/Vue%E7%BB%84%E4%BB%B6%E5%A4%8D%E7%94%A8/" rel="next" title="Vue组件复用">
-                  Vue组件复用 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
